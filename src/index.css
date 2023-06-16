@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .active {
+    width: 300px !important;
+  }
+}
+
+select:required:invalid {
+  color: gray;
+}
+
+.skew-logo {
+  transform: matrix(1, 0, -0.6, 1, 15, 0)
+}
