@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import LogoSvg from "../../assets/icon";
 import Menu from "./Menu";
 import { FaBars } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import logo from "../../assets/charj_logo.png";
+import logoWhite from "../../assets/charj_logowhite.png";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -29,26 +30,12 @@ const Navbar = () => {
     router.pathname === "/padestal-energy" ||
     router.pathname === "/charj-network";
 
-  // const navItems = [
-  //   { id: 1, title: "Option 1", url: "#" },
-  //   { id: 2, title: "Services", url: "/services" },
-  //   { id: 3, title: "The Padestal Energy", url: "/padestal-energy" },
-  //   { id: 4, title: "Option 4", url: "#" },
-  //   { id: 5, title: "Option 5", url: "#" },
-  //   { id: 6, title: "Option 6", url: "#" },
-  //   { id: 7, title: "Option 7", url: "#" },
-  // ];
-
   const menuItems = [
-    // { id: 1, title: "Partner With Us", url: "/join-us" },
-    // { id: 2, title: "Menu Option B", url: "#" },
-    // { id: 3, title: "Menu Option C", url: "#" },
     { id: 1, title: "Contact Us", url: "/contact-us" },
     { id: 2, title: "FAQ's", url: "/faqs" },
   ];
   return (
     <>
-      {/* <div className=""> */}
       <div
         className={`${
           scrolled
@@ -62,30 +49,17 @@ const Navbar = () => {
           } skew-logo  cursor-pointer  h-full px-4 py-5 `}
         >
           <Link to="/">
-            <git 
-              width="6rem"
-              logocolor={
-                !homeRoute && !darkBgRoute && !scrolled ? "#000" : "#fff"
-              }
-            />
+            {!homeRoute && !darkBgRoute && !scrolled ? (
+              <img src={logo} alt="logo" className="h-5" />
+            ) : (
+              <img src={logoWhite} alt="logo" className="h-5" />
+            )}
           </Link>
         </div>
-        {/* <div className=" flex justify-between">
-          <span className="hidden lg:flex flex-row gap-3 lg:gap-3 xl:gap-5">
-            {navItems.map((item) => {
-              return (
-                <Link to={item.url} className="mx-1 text-[1rem] font-semibold cursor-pointer hover:bg-slate-100 px-3 py-1 rounded-md">
-                  {item.title}
-                </Link>
-              );
-            })}
-          </span>
-        </div> */}
 
         <div className="flex gap-5 text-[1rem] font-semibold">
           <div className="hidden lg:flex gap-5">
-
-          <Link
+            <Link
               to="/services"
               className={`${
                 (homeRoute || darkBgRoute) && !scrolled
@@ -105,7 +79,7 @@ const Navbar = () => {
             >
               The Padestal Energy
             </Link>
-            
+
             <Link
               to="/charj-network"
               className={`${
@@ -116,7 +90,7 @@ const Navbar = () => {
             >
               The Charge Network
             </Link>
-          <Link
+            <Link
               to="/join-us"
               className={`${
                 (homeRoute || darkBgRoute) && !scrolled
@@ -150,7 +124,6 @@ const Navbar = () => {
         </div>
         <Menu
           menuItems={menuItems}
-          // navItems={navItems}
           showMenu={showMenu}
           setShowMenu={setShowMenu}
         />

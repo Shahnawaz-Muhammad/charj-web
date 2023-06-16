@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./components/navbar/Index";
 import Home from './pages/home';
 import Faqs from "./pages/faqs";
 import Services from "./pages/services";
@@ -9,6 +8,7 @@ import CharjNetwork from "./pages/charjNetwork";
 import JoinUs from "./pages/joinus";
 import ContactUs from "./pages/contact";
 import Footer from "./components/footer";
+import Navbar from "./components/navbar/Index";
 
 function App() {
 
