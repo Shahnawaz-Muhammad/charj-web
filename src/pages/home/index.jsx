@@ -1,6 +1,6 @@
 import React from "react";
 import heroVideo from "../../assets/images/car-model.mp4";
-import homeVideo from "../../assets/images/electric.webm";
+import homeVideo from "../../assets/images/Electric.webm"
 import { Link } from "react-router-dom";
 import IndustryInsights from "../../components/learnmore";
 import About from "../../components/about";
