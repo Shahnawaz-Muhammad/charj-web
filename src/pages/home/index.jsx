@@ -1,6 +1,6 @@
 import React from "react";
 import heroVideo from "../../assets/images/car-model.mp4";
-// import homeVideo from "../../assets/images/Electric.webm"
+import homeVideo from "../../assets/images/Electric.webm"
 import { Link } from "react-router-dom";
 import IndustryInsights from "../../components/learnmore";
 import About from "../../components/about";
@@ -36,10 +36,10 @@ const Home = () => {
         </div>
       </div>
 
-      {/* <div className="bg-black py-20 max-w-screen">
+      <div className="bg-black py-20 max-w-screen">
           <div className="bg-[#000000] h-full  flex justify-center">
             <video
-              // src={homeVideo}
+              src={homeVideo}
               autoPlay
               loop
               muted
@@ -47,7 +47,7 @@ const Home = () => {
               className="h-full w-[1200px] object-cover"
             />
           </div>
-      </div> */}
+      </div>
 
       <IndustryInsights />
       <About />
